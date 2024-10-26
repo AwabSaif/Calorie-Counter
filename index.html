@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Calorie Counter - Track your daily calorie intake for breakfast, lunch, dinner, and snacks, and monitor exercise to stay on track with your health goals."
+    />
+    <meta
+      name="keywords"
+      content="calorie counter, calorie tracker, food log, exercise log, daily calorie budget, health tracker, diet planner, meal tracker"
+    />
+    <meta name="author" content="Your Name" />
+
+    <!-- Social Media Preview -->
+    <meta
+      property="og:title"
+      content="Calorie Counter - Daily Calorie Tracking Tool"
+    />
+    <meta
+      property="og:description"
+      content="Easily track your daily calorie intake for each meal and exercise with this calorie counter tool."
+    />
+    <meta property="og:image" content="URL_to_your_image.jpg" />
+    <!-- Replace with a relevant image URL -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <!-- Replace with your site URL -->
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="Calorie Counter - Track your daily calorie intake for breakfast, lunch, dinner, and snacks, and monitor exercise to stay on track with your health goals." />
-        <meta name="keywords" content="calorie counter, calorie tracker, food log, exercise log, daily calorie budget, health tracker, diet planner, meal tracker" />
-        <meta name="author" content="Your Name" />
-      
-        <!-- Social Media Preview -->
-        <meta property="og:title" content="Calorie Counter - Daily Calorie Tracking Tool" />
-        <meta property="og:description" content="Easily track your daily calorie intake for each meal and exercise with this calorie counter tool." />
-        <meta property="og:image" content="URL_to_your_image.jpg" /> <!-- Replace with a relevant image URL -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourwebsite.com" /> <!-- Replace with your site URL -->
-        
-        <title>Calorie Counter</title>
-      </head>
-      
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-11DEJ08K9M"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-11DEJ08K9M");
+      </script>
+    </head>
+
+    <title>Calorie Counter</title>
+  </head>
+
   <body>
     <main>
       <h1>Calorie Counter</h1>
@@ -67,9 +95,7 @@
             </span>
           </div>
           <div>
-            <button type="submit">
-              Calculate Remaining Calories
-            </button>
+            <button type="submit">Calculate Remaining Calories</button>
             <button type="button" id="clear">Clear</button>
           </div>
         </form>
