@@ -89,7 +89,7 @@ select {
 }
 
 .surplus {
-  color: var(--light-pink);
+  color: var(--dark-red);
 }
 
 .deficit {
