@@ -1,66 +1,66 @@
 :root {
-    --light-blue: #a2c3f2; 
-    --dark-blue: #1a1a40; 
-    --fcc-blue: #2b2b5c; 
-    --light-yellow: #ffcc66;
-    --dark-yellow: #ffb733; 
-    --light-pink: #ffb3b3; 
-    --dark-red: #990000; 
-    --light-green: #b2d91c; 
+  --light-blue: #a2c3f2;
+  --dark-blue: #1a1a40;
+  --fcc-blue: #2b2b5c;
+  --light-yellow: #ffcc66;
+  --dark-yellow: #ffb733;
+  --light-pink: #ffb3b3;
+  --dark-red: #990000;
+  --light-green: #4BB543;
 }
 
 body {
-    font-family: "Lato", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    background-color: var(--fcc-blue);
-    color: var(--light-blue);
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  background-color: var(--fcc-blue);
+  color: var(--light-blue);
 }
 
 h1 {
-    text-align: center;
-    color: var(--dark-yellow);
+  text-align: center;
+  color: var(--dark-yellow);
 }
 
 .container {
-    width: 90%;
-    max-width: 680px;
-    background-color: var(--light-blue);
-    padding: 20px;
-    border-radius: 8px;
+  width: 90%;
+  max-width: 680px;
+  background-color: var(--light-blue);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 h1,
 .container,
 .output {
-    margin: 20px auto;
+  margin: 20px auto;
 }
 
 label,
 legend {
-    font-weight: bold;
-    color: var(--dark-blue);
+  font-weight: bold;
+  color: var(--dark-blue);
 }
 
 .input-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
-    cursor: pointer;
-    text-decoration: none;
-    background-color: var(--light-yellow);
-    border: 2px solid var(--dark-yellow);
-    color: var(--dark-blue);
-    padding: 10px;
-    border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--light-yellow);
+  border: 2px solid var(--dark-yellow);
+  color: var(--dark-blue);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 button,
 input,
 select {
-    min-height: 24px;
-    color: var(--dark-blue);
+  min-height: 24px;
+  color: var(--dark-blue);
 }
 
 fieldset,
@@ -68,29 +68,30 @@ label,
 button,
 input,
 select {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .output {
-    border: 2px solid var(--dark-red);
-    padding: 10px;
-    text-align: center;
-    background-color: var(--light-pink);
+  border: 2px solid var(--light-green);
+  padding: 10px;
+  text-align: center;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .output span {
-    font-weight: bold;
-    font-size: 1.2em;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .surplus {
-    color: var(--light-green);
+  color: var(--light-pink);
 }
 
 .deficit {
-    color: var(--dark-red);
+  color: var(--light-green);
 }
