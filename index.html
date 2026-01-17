@@ -1,109 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
 
-    <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Calorie Counter - Track your daily calorie intake for breakfast, lunch, dinner, and snacks, and monitor exercise to stay on track with your health goals."
-    />
-    <meta
-      name="keywords"
-      content="calorie counter, calorie tracker, food log, exercise log, daily calorie budget, health tracker, diet planner, meal tracker"
-    />
-    <meta name="author" content="Awab Saif" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- Social Media Preview -->
-    <meta
-      property="og:title"
-      content="Calorie Counter - Daily Calorie Tracking Tool"
-    />
-    <meta
-      property="og:description"
-      content="Easily track your daily calorie intake for each meal and exercise with this calorie counter tool."
-    />
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Calorie Counter - A modern tool to track daily calories in English & Arabic. حاسبة السعرات الحرارية - أداة حديثة لتتبع السعرات اليومية باللغتين العربية والإنجليزية." />
+  <meta name="keywords"
+    content="calorie counter, calorie tracker, food log, weight loss, health tracker, nutrition app, حاسبة سعرات, عداد السعرات, حاسبة غذائية, تتبع الوزن" />
+  <meta name="author" content="Awab Saif" />
 
-    <!-- Replace with a relevant image URL -->
-    <meta property="og:type" content="Calorie Counter" />
-    <meta
-      property="og:url"
-      content="https://calorie-counter-sr25.onrender.com"
-    />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-11DEJ08K9M"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="file:///Users/awabsaif/Desktop/Awab%20saif/Calorie-Counter/index.html" />
+  <meta property="og:title" content="Modern Calorie Counter | حاسبة السعرات" />
+  <meta property="og:description"
+    content="Track your nutrition with ease in English and Arabic. تتبع تغذيتك بسهولة بالعربية والإنجليزية." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Modern Calorie Counter | حاسبة السعرات" />
+  <meta property="twitter:description" content="Premium calorie tracking tool with dark mode and Arabic support." />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Modern Calorie Counter",
+      "alternateName": "حاسبة السعرات الحرارية الحديثة",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "A multilingual calorie tracking tool for health and fitness.",
+      "author": {
+        "@type": "Person",
+        "name": "Awab Saif"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-11DEJ08K9M");
+    }
     </script>
 
-    <title>Calorie Counter</title>
-  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-11DEJ08K9M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-11DEJ08K9M");
+  </script>
 
-  <body>
-    <main>
-      <h1>Calorie Counter</h1>
-      <div class="container">
-        <form id="calorie-counter">
-          <label for="budget">Budget</label>
-          <input
-            type="number"
-            min="0"
-            id="budget"
-            placeholder="Daily calorie budget"
-            required
-          />
-          <fieldset id="breakfast">
-            <legend>Breakfast</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="lunch">
-            <legend>Lunch</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="dinner">
-            <legend>Dinner</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="snacks">
-            <legend>Snacks</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <fieldset id="exercise">
-            <legend>Exercise</legend>
-            <div class="input-container"></div>
-          </fieldset>
-          <div class="controls">
-            <span>
-              <label for="entry-dropdown">Add food or exercise:</label>
-              <select id="entry-dropdown" name="options">
-                <option value="breakfast" selected>Breakfast</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-                <option value="snacks">Snacks</option>
-                <option value="exercise">Exercise</option>
-              </select>
-              <button type="button" id="add-entry">Add Entry</button>
-            </span>
-          </div>
-          <div>
-            <button type="submit">Calculate Remaining Calories</button>
-            <button type="button" id="clear">Clear</button>
-          </div>
-        </form>
-        <div id="output" class="output hide"></div>
+  <title id="page-title">Calorie Counter</title>
+</head>
+
+<body>
+  <main>
+    <h1 id="main-heading">Calorie Counter</h1>
+
+    <div class="container">
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
       </div>
-    </main>
-    <script src="./script.js"></script>
-  </body>
+
+      <form id="calorie-counter">
+        <div class="input-group">
+          <label for="budget" id="label-budget">Daily Budget</label>
+          <input type="number" min="0" id="budget" placeholder="e.g. 2000" required />
+        </div>
+
+        <fieldset id="breakfast">
+          <legend>
+            <span id="legend-breakfast">Breakfast</span>
+            <button type="button" class="add-entry-btn" data-category="breakfast" title="Add Entry">+</button>
+          </legend>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <fieldset id="lunch">
+          <legend>
+            <span id="legend-lunch">Lunch</span>
+            <button type="button" class="add-entry-btn" data-category="lunch" title="Add Entry">+</button>
+          </legend>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <fieldset id="dinner">
+          <legend>
+            <span id="legend-dinner">Dinner</span>
+            <button type="button" class="add-entry-btn" data-category="dinner" title="Add Entry">+</button>
+          </legend>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <fieldset id="snacks">
+          <legend>
+            <span id="legend-snacks">Snacks</span>
+            <button type="button" class="add-entry-btn" data-category="snacks" title="Add Entry">+</button>
+          </legend>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <fieldset id="exercise">
+          <legend>
+            <span id="legend-exercise">Exercise</span>
+            <button type="button" class="add-entry-btn" data-category="exercise" title="Add Entry">+</button>
+          </legend>
+          <div class="input-container"></div>
+        </fieldset>
+
+        <div class="action-buttons">
+          <button type="submit" id="btn-calculate">Calculate Balance</button>
+          <button type="button" id="clear">Reset</button>
+        </div>
+      </form>
+
+      <div id="output" class="output hide"></div>
+    </div>
+
+    <footer class="seo-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Calorie Counter</h3>
+          <p>Our Modern Calorie Counter helps you achieve your fitness goals by tracking your daily intake for
+            breakfast, lunch, dinner, and exercise. It's built for speed, simplicity, and global use with full Arabic
+            and English support.</p>
+        </div>
+        <div class="footer-section">
+          <h3>حول حاسبة السعرات</h3>
+          <p>تساعدك حاسبة السعرات الحديثة على تحقيق أهدافك البدنية من خلال تتبع وجبات الفطور والغداء والعشاء والتمارين
+            الرياضية. صُممت لتكون سريعة وبسيطة وتدعم اللغتين العربية والإنجليزية بشكل كامل.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
 </html>
